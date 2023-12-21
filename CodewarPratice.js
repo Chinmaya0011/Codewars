@@ -1,5 +1,6 @@
 // Function: reverseNumber
 // Description: Reverses the digits of a given number.
+/*
 function reverseNumber(num) {
     let rev = num.toString().split('').reverse().join('');
     return parseInt(rev);
@@ -328,4 +329,270 @@ function towerBuilder(nFloors) {
 }
 
 // Test the towerBuilder function
-console.log(towerBuilder(5));
+
+function rentalCarCost(d) {
+    let rentPerDay=40;
+      let totalRent=0;
+      if(d<3){
+        totalRent=rentPerDay*d
+      }
+    else if(d>=3 && d<7){
+      totalRent=(rentPerDay*d)-20;
+    }
+      else{totalRent=(rentPerDay*d)-50;}
+      return totalRent;}
+ */
+//return the total number of smiling faces in the array
+
+// function countSmileys(arr) {
+//     let validSmile=[':)' ,':D' ,';-D' ,':~)'];
+//      let count=0;
+//      for(let i=0;i<arr.length;i++){
+//        for(let j=0;j<validSmile.length;j++){
+//          if(arr[i]===validSmile[j]){
+//            count++
+//          }
+//        }
+//      }
+//      return count;
+//    }
+//    console.log(countSmileys([':)', ';(', ';}',':-D']))
+// function findUniq(arr) {
+//     let unique;
+//       arr.find((a,b)=>{
+//    if(a!=b){
+//           unique=b;
+//         }
+//       })
+//       return unique;
+//     }
+//     console.log(findUniq[1,1,1,1,1,2])
+
+
+// const reverseSeq = n => {
+//     let arr=[]
+//     for(let i=n;i>0;i--){
+//   arr.push(i) }
+//     console.log(arr)
+//   };
+//   reverseSeq(5)
+
+// function findNeedle(haystack) {
+
+//     for(let i=0;i<haystack.length;i++){
+//       if(haystack[i]==="needle"){
+//         console.log(`found the needle at position ${i}`)
+//       }
+//     }     findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"])
+// function sumStr(a,b) {
+//     let sum=0;
+//     if(a===""||b===""){
+//       sum+=0;
+//     }
+//     else{sum=parseInt(a)+parseInt(b)}
+//     return sum;
+//   }
+// //   console.log(sumStr("3","4"))
+    
+// function getSum(a, b)
+// {
+// let sum=0;
+// if(a===b){
+//   sum=a;
+// }
+// else{sum=eval(a+b)}
+// return sum;
+// }
+// console.log(getSum(471,223))
+    
+// function solution(str, ending){
+//     let found=false;
+//       let newStr=str.slice(-ending.length);
+//       if(ending===newStr){
+//         found=true;
+//       }
+
+//       if(ending===''){
+//         found=true;
+//       }
+//     return found;
+//     }
+//     console.log(solution('abc',''))
+
+// var uniqueInOrder=function(iterable){
+//     let newArr=[];
+     
+//      for(let i=0;i<iterable.length;i++){
+//        if(iterable[i]!==iterable.slice(1,i)){
+//          newArr.push(iterable[i])
+//        }
+//      }
+     
+//      return newArr;
+//    }
+//    console.log(uniqueInOrder('AAAABBBCCDAABBB'))
+   
+
+
+// function squareSum(numbers){
+//     let sum=0;
+//       for(let i=0;i<numbers.length;i++){
+//         sum+=numbers[i]*numbers[i]
+//       }
+      
+//       return sum;
+      
+//     }
+
+//     console.log(squareSum([1,2,2]))
+
+// function sumTwoSmallestNumbers(numbers) {  
+//     let arr=numbers.sort((a,b)=>a-b);
+//       return arr[0]+arr[1];
+//     }
+//     console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]))
+
+
+// function friend(friends){
+
+//     let frnd=[];
+      
+//       for(let i=0;i<friends.length;i++){
+//         if(friends[0].length===friends[i].length){
+//           frnd.push(friends[i])
+//         }
+//         else{return frnd=friends[0]}
+//       }
+//       return frnd;
+//     }
+//     console.log(friend(["Ryan", "Jimmy", "123", "4", "Cool Man"]))
+
+// function add(a, b) {
+//     return (BigInt(a) + BigInt(b)).toString();
+// }
+
+// console.log(add('63829983432984289347293874', '90938498237058927340892374089'));
+// function numberToString(num) {
+//   let arr=toString(num);
+//   return arr;
+//     }
+//     console.log(numberToString(123))
+
+// function toJadenCase(sentence) {
+//     let sentence1=sentence.split(' ');
+
+//     sentence1.map(word=>{wrod[0].toUpperCase()+word.slice(1)});
+//     return sentence1.join("")
+
+//     }
+    
+//     const originalSentence = "How can mirrors be real if our eyes aren't real";
+//     const jadenCasedSentence = toJadenCase(originalSentence);
+    
+//     console.log(jadenCasedSentence);
+
+// function points(games) {
+//     let points1=0;
+//       for(let i=0;i<games.length;i++){
+//         let gaming=games[i].split('')
+//         gaming.splice(1,1);
+//         console.log(gaming)
+//         if(gaming[0]>gaming[1]){
+//           points1+=3;
+//         }
+//         else if(gaming[0]<gaming[1]){
+//           points1+=0
+//         }
+//         else{points1+=1}
+        
+//       }
+//       return points1;
+//     }
+//     console.log(points(["3:1", "2:2", "0:1"]))
+
+// function reverseWords(str) {
+//     let newStr;
+//      for(let i=0;i<str.length;i++){
+//        let word=str[i]
+//        newStr+=word;
+//      }
+//      return newStr;
+//    }
+//    console.log(reverseWords("This is an example!"))
+
+// function reverseWords(str) {
+//     let newStr = '';
+
+//     for (let i = 0; i < str.length; i++) {
+//         let word = str[i].split('').reverse().join('');
+//         newStr += word + ''; // Add a space between reversed words
+//     }
+
+//     return newStr
+// }
+
+// // console.log(reverseWords("This is an example!"));
+
+// function solution(nums){
+//     if(typeof nums===null){
+//       return []
+//     }
+    
+//   return nums.sort((a,b)=>a-b)
+    
+    
+// //   }
+
+// function doubleChar(str) {
+//     let newWord=[];
+//       for(let i=0;i<str.length;i++){
+//         newWord.push(str[i]+str[i])
+//       }
+//       return newWord.join('');
+//     }
+//     console.log(doubleChar("Hey"))
+
+
+// function abbrevName(name){
+
+//     let name1=name.split(" ");
+//       let result=[]
+//       for(let i=0;i<name1.length;i++){
+
+// result.push(name1[i][0].toUpperCase())
+
+
+//       }
+      
+// return result.join('.')
+    
+//     }
+//    console.log(abbrevName("chinmaya kumar"))
+
+
+// function findDifference(a, b) {
+//     let aResult=1;
+//     let bResult=1;
+    
+//     for(let i=0;i<a.length;i++){
+//       aResult*=a[i]
+//     }
+//     for(let i=0;i<b.length;b++){
+//       bResult*=b[i]
+//     }
+    
+//     let finalResult=[aResult,bResult];
+    
+//     let sortResult=finalResult.sort((a,b)=>a-b);
+    
+//     let resultS=sortResult[0]-sortResult[1];;
+//     return resultS;
+    
+  
+    
+//   }
+  
+//   console.log(findDifference([2, 2, 3], [5, 4, 1]))
+
+
+
