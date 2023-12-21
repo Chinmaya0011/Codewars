@@ -327,272 +327,268 @@ function towerBuilder(nFloors) {
     }
     return star;
 }
-
-// Test the towerBuilder function
-
+// Function: rentalCarCost
+// Description: Calculates the total cost of renting a car based on the number of days.
 function rentalCarCost(d) {
-    let rentPerDay=40;
-      let totalRent=0;
-      if(d<3){
-        totalRent=rentPerDay*d
-      }
-    else if(d>=3 && d<7){
-      totalRent=(rentPerDay*d)-20;
+    let rentPerDay = 40;
+    let totalRent = 0;
+    if (d < 3) {
+        totalRent = rentPerDay * d;
+    } else if (d >= 3 && d < 7) {
+        totalRent = (rentPerDay * d) - 20;
+    } else {
+        totalRent = (rentPerDay * d) - 50;
     }
-      else{totalRent=(rentPerDay*d)-50;}
-      return totalRent;}
- */
-//return the total number of smiling faces in the array
+    return totalRent;
+}
 
-// function countSmileys(arr) {
-//     let validSmile=[':)' ,':D' ,';-D' ,':~)'];
-//      let count=0;
-//      for(let i=0;i<arr.length;i++){
-//        for(let j=0;j<validSmile.length;j++){
-//          if(arr[i]===validSmile[j]){
-//            count++
-//          }
-//        }
-//      }
-//      return count;
-//    }
-//    console.log(countSmileys([':)', ';(', ';}',':-D']))
-// function findUniq(arr) {
-//     let unique;
-//       arr.find((a,b)=>{
-//    if(a!=b){
-//           unique=b;
-//         }
-//       })
-//       return unique;
-//     }
-//     console.log(findUniq[1,1,1,1,1,2])
+// Function: countSmileys
+// Description: Counts the total number of valid smiley faces in the array.
+function countSmileys(arr) {
+    let validSmile = [':)', ':D', ';-D', ':~)'];
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < validSmile.length; j++) {
+            if (arr[i] === validSmile[j]) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
 
+// Function: findUniq
+// Description: Finds the unique number in an array.
+function findUniq(arr) {
+    let unique;
+    arr.find((a, b) => {
+        if (a != b) {
+            unique = b;
+        }
+    });
+    return unique;
+}
 
-// const reverseSeq = n => {
-//     let arr=[]
-//     for(let i=n;i>0;i--){
-//   arr.push(i) }
-//     console.log(arr)
-//   };
-//   reverseSeq(5)
+// Function: reverseSeq
+// Description: Generates a sequence of numbers in reverse order.
+const reverseSeq = n => {
+    let arr = []
+    for (let i = n; i > 0; i--) {
+        arr.push(i);
+    }
+    console.log(arr);
+};
 
-// function findNeedle(haystack) {
+// Function: findNeedle
+// Description: Finds the position of "needle" in an array.
+function findNeedle(haystack) {
+    for (let i = 0; i < haystack.length; i++) {
+        if (haystack[i] === "needle") {
+            console.log(`found the needle at position ${i}`);
+        }
+    }
+}
 
-//     for(let i=0;i<haystack.length;i++){
-//       if(haystack[i]==="needle"){
-//         console.log(`found the needle at position ${i}`)
-//       }
-//     }     findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"])
-// function sumStr(a,b) {
-//     let sum=0;
-//     if(a===""||b===""){
-//       sum+=0;
-//     }
-//     else{sum=parseInt(a)+parseInt(b)}
-//     return sum;
-//   }
-// //   console.log(sumStr("3","4"))
-    
-// function getSum(a, b)
-// {
-// let sum=0;
-// if(a===b){
-//   sum=a;
-// }
-// else{sum=eval(a+b)}
-// return sum;
-// }
-// console.log(getSum(471,223))
-    
-// function solution(str, ending){
-//     let found=false;
-//       let newStr=str.slice(-ending.length);
-//       if(ending===newStr){
-//         found=true;
-//       }
+// Function: sumStr
+// Description: Sums two strings and returns the result.
+function sumStr(a, b) {
+    let sum = 0;
+    if (a === "" || b === "") {
+        sum += 0;
+    } else {
+        sum = parseInt(a) + parseInt(b);
+    }
+    return sum;
+}
 
-//       if(ending===''){
-//         found=true;
-//       }
-//     return found;
-//     }
-//     console.log(solution('abc',''))
+// Function: getSum
+// Description: Sums two numbers.
+function getSum(a, b) {
+    let sum = 0;
+    if (a === b) {
+        sum = a;
+    } else {
+        sum = eval(a + b);
+    }
+    return sum;
+}
 
-// var uniqueInOrder=function(iterable){
-//     let newArr=[];
-     
-//      for(let i=0;i<iterable.length;i++){
-//        if(iterable[i]!==iterable.slice(1,i)){
-//          newArr.push(iterable[i])
-//        }
-//      }
-     
-//      return newArr;
-//    }
-//    console.log(uniqueInOrder('AAAABBBCCDAABBB'))
-   
+// Function: solution
+// Description: Checks if a string ends with a given substring.
+function solution(str, ending) {
+    let found = false;
+    let newStr = str.slice(-ending.length);
+    if (ending === newStr) {
+        found = true;
+    }
 
+    if (ending === '') {
+        found = true;
+    }
+    return found;
+}
 
-// function squareSum(numbers){
-//     let sum=0;
-//       for(let i=0;i<numbers.length;i++){
-//         sum+=numbers[i]*numbers[i]
-//       }
-      
-//       return sum;
-      
-//     }
+// Function: uniqueInOrder
+// Description: Finds unique elements in a sequence.
+var uniqueInOrder = function (iterable) {
+    let newArr = [];
 
-//     console.log(squareSum([1,2,2]))
+    for (let i = 0; i < iterable.length; i++) {
+        if (iterable[i] !== iterable.slice(1, i)) {
+            newArr.push(iterable[i]);
+        }
+    }
 
-// function sumTwoSmallestNumbers(numbers) {  
-//     let arr=numbers.sort((a,b)=>a-b);
-//       return arr[0]+arr[1];
-//     }
-//     console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]))
+    return newArr;
+};
 
+// Function: squareSum
+// Description: Calculates the sum of squares of numbers in an array.
+function squareSum(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i] * numbers[i];
+    }
 
-// function friend(friends){
+    return sum;
+}
 
-//     let frnd=[];
-      
-//       for(let i=0;i<friends.length;i++){
-//         if(friends[0].length===friends[i].length){
-//           frnd.push(friends[i])
-//         }
-//         else{return frnd=friends[0]}
-//       }
-//       return frnd;
-//     }
-//     console.log(friend(["Ryan", "Jimmy", "123", "4", "Cool Man"]))
+// Function: sumTwoSmallestNumbers
+// Description: Sums the two smallest numbers in an array.
+function sumTwoSmallestNumbers(numbers) {
+    let arr = numbers.sort((a, b) => a - b);
+    return arr[0] + arr[1];
+}
 
-// function add(a, b) {
-//     return (BigInt(a) + BigInt(b)).toString();
-// }
+// Function: friend
+// Description: Finds friends with the same name length or returns the first friend.
+function friend(friends) {
+    let frnd = [];
 
-// console.log(add('63829983432984289347293874', '90938498237058927340892374089'));
-// function numberToString(num) {
-//   let arr=toString(num);
-//   return arr;
-//     }
-//     console.log(numberToString(123))
+    for (let i = 0; i < friends.length; i++) {
+        if (friends[0].length === friends[i].length) {
+            frnd.push(friends[i]);
+        } else {
+            return frnd = friends[0];
+        }
+    }
+    return frnd;
+}
 
-// function toJadenCase(sentence) {
-//     let sentence1=sentence.split(' ');
+// Function: add
+// Description: Adds two numbers using BigInt for large numbers.
+function add(a, b) {
+    return (BigInt(a) + BigInt(b)).toString();
+}
 
-//     sentence1.map(word=>{wrod[0].toUpperCase()+word.slice(1)});
-//     return sentence1.join("")
+// Function: numberToString
+// Description: Converts a number to a string.
+function numberToString(num) {
+    let arr = toString(num);
+    return arr;
+}
 
-//     }
-    
-//     const originalSentence = "How can mirrors be real if our eyes aren't real";
-//     const jadenCasedSentence = toJadenCase(originalSentence);
-    
-//     console.log(jadenCasedSentence);
+// Function: toJadenCase
+// Description: Converts a sentence to Jaden Case.
+function toJadenCase(sentence) {
+    let sentence1 = sentence.split(' ');
 
-// function points(games) {
-//     let points1=0;
-//       for(let i=0;i<games.length;i++){
-//         let gaming=games[i].split('')
-//         gaming.splice(1,1);
-//         console.log(gaming)
-//         if(gaming[0]>gaming[1]){
-//           points1+=3;
-//         }
-//         else if(gaming[0]<gaming[1]){
-//           points1+=0
-//         }
-//         else{points1+=1}
-        
-//       }
-//       return points1;
-//     }
-//     console.log(points(["3:1", "2:2", "0:1"]))
+    sentence1.map(word => { wrod[0].toUpperCase() + word.slice(1) });
+    return sentence1.join("");
+}
 
-// function reverseWords(str) {
-//     let newStr;
-//      for(let i=0;i<str.length;i++){
-//        let word=str[i]
-//        newStr+=word;
-//      }
-//      return newStr;
-//    }
-//    console.log(reverseWords("This is an example!"))
+// Function: points
+// Description: Calculates points in a series of games.
+function points(games) {
+    let points1 = 0;
+    for (let i = 0; i < games.length; i++) {
+        let gaming = games[i].split('')
+        gaming.splice(1, 1);
+        console.log(gaming)
+        if (gaming[0] > gaming[1]) {
+            points1 += 3;
+        } else if (gaming[0] < gaming[1]) {
+            points1 += 0
+        } else {
+            points1 += 1;
+        }
 
-// function reverseWords(str) {
-//     let newStr = '';
+    }
+    return points1;
+}
 
-//     for (let i = 0; i < str.length; i++) {
-//         let word = str[i].split('').reverse().join('');
-//         newStr += word + ''; // Add a space between reversed words
-//     }
+// Function: reverseWords
+// Description: Reverses the characters of each word in a sentence.
+function reverseWords(str) {
+    let newStr = '';
 
-//     return newStr
-// }
+    for (let i = 0; i < str.length; i++) {
+        let word = str[i].split('').reverse().join('');
+        newStr += word + ''; // Add a space between reversed words
+    }
 
-// // console.log(reverseWords("This is an example!"));
+    return newStr;
+}
 
-// function solution(nums){
-//     if(typeof nums===null){
-//       return []
-//     }
-    
-//   return nums.sort((a,b)=>a-b)
-    
-    
-// //   }
+// Function: solution
+// Description: Sorts an array of numbers in ascending order.
+function solution(nums) {
+    if (typeof nums === null) {
+        return []
+    }
 
-// function doubleChar(str) {
-//     let newWord=[];
-//       for(let i=0;i<str.length;i++){
-//         newWord.push(str[i]+str[i])
-//       }
-//       return newWord.join('');
-//     }
-//     console.log(doubleChar("Hey"))
+    return nums.sort((a, b) => a - b);
+}
 
+// Function: doubleChar
+// Description: Doubles each character in a string.
+function doubleChar(str) {
+    let newWord = [];
+    for (let i = 0; i < str.length; i++) {
+        newWord.push(str[i] + str[i]);
+    }
+    return newWord.join('');
+}
 
-// function abbrevName(name){
+// Function: abbrevName
+// Description: Generates initials from a full name.
+function abbrevName(name) {
+    let name1 = name.split(" ");
+    let result = []
+    for (let i = 0; i < name1.length; i++) {
+        result.push(name1[i][0].toUpperCase());
+    }
+    return result.join('.')
+}
 
-//     let name1=name.split(" ");
-//       let result=[]
-//       for(let i=0;i<name1.length;i++){
+// Function: findDifference
+// Description: Finds the absolute difference between products of two arrays.
+function findDifference(a, b) {
+    let aResult = 1;
+    let bResult = 1;
 
-// result.push(name1[i][0].toUpperCase())
+    for (let i = 0; i < a.length; i++) {
+        aResult *= a[i];
+    }
+    for (let i = 0; i < b.length; b++) {
+        bResult *= b[i];
+    }
 
+    let finalResult = [aResult, bResult];
 
-//       }
-      
-// return result.join('.')
-    
-//     }
-//    console.log(abbrevName("chinmaya kumar"))
+    let sortResult = finalResult.sort((a, b) => a - b);
 
+    let resultS = sortResult[0] - sortResult[1];
+    return resultS;
+}
 
-// function findDifference(a, b) {
-//     let aResult=1;
-//     let bResult=1;
-    
-//     for(let i=0;i<a.length;i++){
-//       aResult*=a[i]
-//     }
-//     for(let i=0;i<b.length;b++){
-//       bResult*=b[i]
-//     }
-    
-//     let finalResult=[aResult,bResult];
-    
-//     let sortResult=finalResult.sort((a,b)=>a-b);
-    
-//     let resultS=sortResult[0]-sortResult[1];;
-//     return resultS;
-    
-  
-    
-//   }
-  
-//   console.log(findDifference([2, 2, 3], [5, 4, 1]))
-
-
-
+// Uncomment the functions you want to test
+// reverseSeq(5);
+// findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]);
+// console.log(sumStr("3", "4"));
+// console.log(getSum(471, 223));
+// console.log(solution([3, 2, 1]));
+// console.log(doubleChar("Hey"));
+// console.log(abbrevName("chinmaya kumar"));
+// console.log(findDifference([2, 2, 3], [5, 4, 1]));
+*/
